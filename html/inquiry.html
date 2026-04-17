@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<!-- saved from url=(0875)https://private-us-east-1.manuscdn.com/sessionFile/7ez9SXrSSEcjRjN5jnuHoX/sandbox/GfQeVzen7a0oyl8tUyMcQ7_1776324187763_na1fn_L2hvbWUvdWJ1bnR1L2NvbnRhY3Q.html?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvN2V6OVNYclNTRWNqUmpONWpudUhvWC9zYW5kYm94L0dmUWVWemVuN2Ewb3lsOHRVeU1jUTdfMTc3NjMyNDE4Nzc2M19uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJOdmJuUmhZM1EuaHRtbCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=kI4HgT0Cixmm-bMNJZUq~xFGz0vu~B8oAnu4Zt0CCHYFOj-8~kI~RS5lqmc77YgtFV9n81p1t6ttaf01JIOB-twCdcXWbTULV7BXs8Ed-kiZLzlQLNqlBr6xKEwDC-FHRfmOWwYDLriuKsQ-FY40dqwMRyITwc2UGgWRfKuMrKeB7AbC9P5aoYlxgNfxItFT0ksxoxvldr0HOsTFHPR2INxwFaBfTvgdLwscrvB3DnsZxvoXW7t5WdL1gSFA9feaOkPI2qVMGxsbgWTwpZMJq7upoDLiV4mdjiZQGk0P6bFATOgTBYu63Lr5alztVG3rZbkSUf-hL423BeGKa50ToQ__ -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | InnoLinks株式会社</title>
+    <link href="./inquiry_files/css2" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link rel="icon" href="favicon.png" sizes="32x32">
+    <link rel="icon" href="favicon.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", "Noto Sans JP", sans-serif;
+            background: #0e0e10;
+            color: #e5e5e5;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 60px;
+            border-bottom: 1px solid rgba(122, 162, 255, 0.1);
+            background: rgba(14, 14, 16, 0.8);
+        }
+
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            color: #e5e5e5;
+        }
+
+        h1 span {
+            font-weight: 600;
+            color: #7aa2ff;
+            letter-spacing: 2px;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 80px 60px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .intro-section {
+            margin-bottom: 60px;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #9ca3af;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* Form Section */
+        .form-section {
+            max-width: 800px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .form-row .form-group {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .form-row .form-group {
+                margin-bottom: 32px;
+            }
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #cfcfcf;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .required {
+            color: #7aa2ff;
+            margin-left: 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(122, 162, 255, 0.2);
+            color: #e5e5e5;
+            padding: 14px 16px;
+            font-family: "Inter", "Noto Sans JP", sans-serif;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            line-height: 1.6;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #7aa2ff;
+            box-shadow: 0 0 0 3px rgba(122, 162, 255, 0.1);
+        }
+
+        /* Style for inputs with content - 群青色 60% transparency */
+        input[type="text"]:not(:placeholder-shown):valid,
+        input[type="email"]:not(:placeholder-shown):valid,
+        input[type="tel"]:not(:placeholder-shown):valid,
+        textarea:not(:placeholder-shown):valid {
+            background: rgba(36, 45, 120, 0.6); /* 群青色 (Gunjou) with 60% opacity */
+            color: #ffffff;
+            border-color: rgba(122, 162, 255, 0.4);
+        }
+
+        /* Autofill styling - 群青色 60% transparency */
+        input[type="text"]:-webkit-autofill,
+        input[type="text"]:-webkit-autofill:hover,
+        input[type="text"]:-webkit-autofill:focus,
+        input[type="text"]:-webkit-autofill:active,
+        input[type="email"]:-webkit-autofill,
+        input[type="email"]:-webkit-autofill:hover,
+        input[type="email"]:-webkit-autofill:focus,
+        input[type="email"]:-webkit-autofill:active,
+        input[type="tel"]:-webkit-autofill,
+        input[type="tel"]:-webkit-autofill:hover,
+        input[type="tel"]:-webkit-autofill:focus,
+        input[type="tel"]:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 1000px #2a3570 inset !important;
+            -webkit-text-fill-color: #ffffff !important;
+            background-color: #2a3570 !important;
+            border-color: rgba(122, 162, 255, 0.4) !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="tel"]::placeholder,
+        textarea::placeholder {
+            color: #666;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 160px;
+            font-family: "Inter", "Noto Sans JP", sans-serif;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'%3E%3Cpath fill=\'%237aa2ff\' d=\'M1 1l5 5 5-5\'/\%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        /* Checkbox */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: #7aa2ff;
+        }
+
+        .checkbox-label {
+            font-size: 14px;
+            color: #9ca3af;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .checkbox-label a {
+            color: #7aa2ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .checkbox-label a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button */
+        .button-group {
+            display: flex;
+            justify-content: flex-start; /* Align buttons to the start */
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+            padding: 16px 40px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Inter", "Noto Sans JP", sans-serif;
+        }
+
+        button[type="submit"] {
+            background: #7aa2ff;
+            color: #0e0e10;
+        }
+
+        button[type="submit"]:hover:not(:disabled) {
+            background: #5a82ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(122, 162, 255, 0.3);
+        }
+
+        button[type="submit"]:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        button[type="submit"]:disabled {
+            background: #4a4a4a;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        button[type="reset"] {
+            background: rgba(255, 255, 255, 0.05);
+            color: #cfcfcf;
+            border: 1px solid rgba(122, 162, 255, 0.2);
+        }
+
+        button[type="reset"]:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #7aa2ff;
+        }
+
+        /* Footer */
+        .footer {
+          border-top: 1px solid #1f1f22;
+          margin-top: 120px;
+          padding: 40px 60px;
+          font-size: 12px;
+          color: #6b7280;
+        }
+
+        .footer-inner {
+          max-width: 1100px;
+          margin: auto;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .footer p {
+          letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 24px;
+            }
+
+            .header-content {
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            main {
+                padding: 40px 24px;
+            }
+
+            .form-section {
+                max-width: 100%;
+            }
+
+            .button-group {
+                flex-direction: column;
+                align-items: flex-start; /* Align items to the start in column layout */
+            }
+
+            button[type="submit"],
+            button[type="reset"] {
+                width: 100%;
+            }
+        }
+
+        /* Error State */
+        input.error,
+        textarea.error,
+        select.error {
+            border-color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.05);
+        }
+
+        .error-message {
+            font-size: 12px;
+            color: #ff6b6b;
+            margin-top: 6px;
+            display: none;
+        }
+
+        input.error ~ .error-message,
+        textarea.error ~ .error-message,
+        select.error ~ .error-message {
+            display: block;
+        }
+
+        /* Class for filled inputs (applied via JavaScript) - 群青色 60% transparency */
+        input.filled,
+        textarea.filled,
+        select.filled {
+            background: rgba(36, 45, 120, 0.6) !important; /* 群青色 (Gunjou) with 60% opacity */
+            color: #ffffff !important;
+            border-color: rgba(122, 162, 255, 0.4) !important;
+        }
+
+        select.filled {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'%3E%3Cpath fill=\'%23ffffff\' d=\'M1 1l5 5 5-5\'/\%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 12px 8px;
+            padding-right: 36px;
+        }
+
+        /* 表单淡出 */
+        .form-section.submitted form {
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: 0.5s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <a href="../index.html">InnoLinks株式会社</a>
+        </div>
+        <div class="title">
+            <h1 style="color:#7aa2ff;">
+              お問い合わせ
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="intro-section">
+                <p id="intro-text">
+                    ご不明な点やご質問がございましたら、以下のフォームにご記入の上、送信ボタンをクリックしてください。
+                    確認後、担当者よりご連絡させていただきます。
+                </p>
+            </section>
+
+            <section class="form-section">
+                <form id="contactForm" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKiTVZ2XN9JAT8Whe6igTGB8FJwA0BY7qK27JpUalsVMtiDg/formResponse" target="hidden_iframe">
+                    <!-- Company and Department Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">会社名</label>
+                            <input type="text" id="company" name="entry.300964684" placeholder="例：株式会社〇〇" class="filled">
+                        </div>
+                        <div class="form-group">
+                            <label for="department">部署名</label>
+                            <input type="text" id="department" name="entry.1261351002" placeholder="例：営業部" class="filled">
+                        </div>
+                    </div>
+
+                    <!-- Name and Furigana Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">お名前<span class="required">*</span></label>
+                            <input type="text" id="name" name="entry.63583106" placeholder="例：田中太郎" required="" class="filled">
+                            <span class="error-message">お名前を入力してください</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="furigana">フリガナ<span class="required">*</span></label>
+                            <input type="text" id="furigana" name="entry.649361159" placeholder="例：タナカタロウ" required="" class="filled">
+                            <span class="error-message">フリガナを入力してください</span>
+                        </div>
+                    </div>
+
+                    <!-- Email and Phone Row -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">メールアドレス<span class="required">*</span></label>
+                            <input type="email" id="email" name="entry.1426648214" placeholder="例：tanaka@example.com" required="" class="filled">
+                            <span class="error-message">正しいメールアドレスを入力してください</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="entry.1771560471" placeholder="例：090-1234-5678" pattern="^[0-9-]+$" title="電話番号は数字とハイフンのみで入力してください" class="filled">
+                            <span class="error-message">電話番号は数字とハイフンのみで入力してください</span>
+                        </div>
+                    </div>
+
+                    <!-- Inquiry Type -->
+                    <div class="form-group">
+                        <label for="inquiryType">お問い合わせ種別<span class="required">*</span></label>
+                        <select id="inquiryType" name="entry.712569009" required="">
+                            <option value="">選択してください</option>
+                            <option value="service">サービスについて</option>
+                            <option value="recruitment">採用について</option>
+                            <option value="partnership">パートナーシップについて</option>
+                            <option value="other">その他</option>
+                        </select>
+                        <span class="error-message">お問い合わせ種別を選択してください</span>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容<span class="required">*</span></label>
+                        <textarea id="message" name="entry.2079067716" placeholder="具体的なお問い合わせ内容をご記入ください" required=""></textarea>
+                        <span class="error-message">お問い合わせ内容を入力してください</span>
+                    </div>
+
+                    <!-- Privacy Policy Agreement -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" class="filled">
+                        <label for="privacy" class="checkbox-label">
+                            <a href="https://private-us-east-1.manuscdn.com/sessionFile/7ez9SXrSSEcjRjN5jnuHoX/sandbox/GfQeVzen7a0oyl8tUyMcQ7_1776324187763_na1fn_L2hvbWUvdWJ1bnR1L2NvbnRhY3Q.html?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvN2V6OVNYclNTRWNqUmpONWpudUhvWC9zYW5kYm94L0dmUWVWemVuN2Ewb3lsOHRVeU1jUTdfMTc3NjMyNDE4Nzc2M19uYTFmbl9MMmh2YldVdmRXSjFiblIxTDJOdmJuUmhZM1EuaHRtbCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&amp;Key-Pair-Id=K2HSFNDJXOU9YS&amp;Signature=kI4HgT0Cixmm-bMNJZUq~xFGz0vu~B8oAnu4Zt0CCHYFOj-8~kI~RS5lqmc77YgtFV9n81p1t6ttaf01JIOB-twCdcXWbTULV7BXs8Ed-kiZLzlQLNqlBr6xKEwDC-FHRfmOWwYDLriuKsQ-FY40dqwMRyITwc2UGgWRfKuMrKeB7AbC9P5aoYlxgNfxItFT0ksxoxvldr0HOsTFHPR2INxwFaBfTvgdLwscrvB3DnsZxvoXW7t5WdL1gSFA9feaOkPI2qVMGxsbgWTwpZMJq7upoDLiV4mdjiZQGk0P6bFATOgTBYu63Lr5alztVG3rZbkSUf-hL423BeGKa50ToQ__#privacy-policy">個人情報保護方針</a>に同意します<span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="button-group">
+                        <button type="submit" id="submitBtn">送信する</button>
+                        <button type="reset" id="resetBtn">リセット</button>
+
+                    </div>
+                </form>
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p>© 2026 InnoLinks株式会社</p>
+        </div>
+        <div class="footer-right">
+          <p>Quietly building the future.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        const section = document.querySelector(".form-section");
+        const introText = document.getElementById("intro-text");
+        const form = document.getElementById("contactForm");
+        const privacyCheckbox = document.getElementById("privacy");
+        const submitBtn = document.getElementById("submitBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const requiredInputs = form.querySelectorAll("input[required], textarea[required], select[required]");
+        const allInputs = form.querySelectorAll("input:not([type=\'checkbox\']), textarea, select");
+        
+        form.addEventListener("submit", function(e) {
+          e.preventDefault(); // 阻止默认提交
+
+          submitBtn.disabled = true;
+          submitBtn.innerText = "送信中...";
+
+          setTimeout(() => {
+            submitBtn.hidden = true;
+
+            if (resetBtn) {
+              resetBtn.hidden = true;
+            }
+
+            introText.innerText = "✅送信しました。メールの返事を待ちください。";
+            section.classList.add("submitted");
+            form.submit();
+          }, 600);
+        });
+
+        // Function to update the filled class on an input
+        function updateFilledClass(input) {
+            if (input.tagName === 'SELECT') {
+                // For select, only add filled class if a non-empty value is selected
+                if (input.value !== '') {
+                    input.classList.add('filled');
+                } else {
+                    input.classList.remove('filled');
+                }
+            } else {
+                // For text inputs and textarea, add filled class if there's content
+                if (input.value.trim() !== '') {
+                    input.classList.add('filled');
+                } else {
+                    input.classList.remove('filled');
+                }
+            }
+        }
+
+        // Function to check if all required fields are filled and valid
+        function checkFormValidity() {
+            let allRequiredFilledAndValid = true;
+            requiredInputs.forEach(input => {
+                // For select elements, check if a value other than the empty option is selected
+                if (input.tagName === 'SELECT') {
+                    if (input.value === '') {
+                        allRequiredFilledAndValid = false;
+                    }
+                } else if (input.value.trim() === '') {
+                    allRequiredFilledAndValid = false;
+                }
+                // Also check if the input is valid according to its type/pattern (HTML5 validation)
+                if (!input.checkValidity()) {
+                    allRequiredFilledAndValid = false;
+                }
+            });
+            return allRequiredFilledAndValid && privacyCheckbox.checked;
+        }
+
+        // Function to validate a single input and update its style/error message
+        function validateInput(input) {
+            let isValid = true;
+            let errorMessage = '';
+
+            // Check for required fields being empty
+            if (input.hasAttribute('required') && input.value.trim() === '') {
+                isValid = false;
+                // Get the label text and append the Japanese phrase for "please enter"
+                const label = input.previousElementSibling;
+                if (label) {
+                    errorMessage = label.textContent.replace('*', '') + 'を入力してください';
+                } else {
+                    errorMessage = 'この項目を入力してください'; // Fallback message
+                }
+            } else if (input.type === 'email') {
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailRegex.test(input.value) && input.value.trim() !== '') {
+                    isValid = false;
+                    errorMessage = '正しいメールアドレスを入力してください';
+                }
+            } else if (input.type === 'tel') {
+                const phoneRegex = /^[0-9-]+$/;
+                if (!phoneRegex.test(input.value) && input.value.trim() !== '') {
+                    isValid = false;
+                    errorMessage = '電話番号は数字とハイフンのみで入力してください';
+                }
+            } else if (input.tagName === 'SELECT' && input.value === '') {
+                isValid = false;
+                const label = input.previousElementSibling;
+                if (label) {
+                    errorMessage = label.textContent.replace('*', '') + 'を選択してください';
+                } else {
+                    errorMessage = 'この項目を選択してください'; // Fallback message
+                }
+            }
+
+            const errorSpan = input.nextElementSibling;
+            if (errorSpan && errorSpan.classList.contains('error-message')) {
+                errorSpan.textContent = errorMessage;
+                if (!isValid) {
+                    input.classList.add('error');
+                    errorSpan.style.display = 'block';
+                } else {
+                    input.classList.remove('error');
+                    errorSpan.style.display = 'none';
+                }
+            }
+            return isValid;
+        }
+
+        // Update submit button state on any input change or checkbox change
+        function updateSubmitButtonState() {
+            submitBtn.disabled = !checkFormValidity();
+        }
+
+        // Initial state of submit button and filled classes
+        updateSubmitButtonState();
+        allInputs.forEach(input => {
+            updateFilledClass(input);
+        });
+
+        // Event listeners for real-time validation and submit button state update
+        allInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                updateFilledClass(this);
+                validateInput(this);
+                updateSubmitButtonState();
+            });
+            input.addEventListener('change', function() {
+                updateFilledClass(this);
+                validateInput(this);
+                updateSubmitButtonState();
+            });
+        });
+
+        privacyCheckbox.addEventListener('change', updateSubmitButtonState);
+
+        // Form submission validation (final check before sending)
+        form.addEventListener('submit', function(e) {
+            let formIsValid = true;
+            allInputs.forEach(input => {
+                if (!validateInput(input)) {
+                    formIsValid = false;
+                }
+            });
+
+            if (!privacyCheckbox.checked) {
+                formIsValid = false;
+                // Optionally add a visual cue for the checkbox if not checked
+            }
+
+            if (!formIsValid) {
+                e.preventDefault(); // Prevent form submission if validation fails
+            }
+        });
+
+        // Reset button functionality to clear errors and reset submit button state
+        form.addEventListener('reset', function() {
+            allInputs.forEach(input => {
+                input.classList.remove('error');
+                input.classList.remove('filled');
+                const errorSpan = input.nextElementSibling;
+                if (errorSpan && errorSpan.classList.contains('error-message')) {
+                    errorSpan.style.display = 'none';
+                }
+            });
+            privacyCheckbox.checked = false;
+            updateSubmitButtonState(); // Update button state after reset
+        });
+
+        // Monitor autofill changes with multiple checks
+        function checkAutofill() {
+            allInputs.forEach(input => {
+                updateFilledClass(input);
+                updateSubmitButtonState();
+            });
+        }
+        // Check multiple times to catch browser autofill at different timings
+        setTimeout(checkAutofill, 100);
+        setTimeout(checkAutofill, 500);
+        setTimeout(checkAutofill, 1000);
+        setTimeout(checkAutofill, 2000);
+
+        // Also listen for animationstart which some browsers trigger on autofill
+        allInputs.forEach(input => {
+            input.addEventListener('animationstart', function() {
+                updateFilledClass(this);
+                updateSubmitButtonState();
+            });
+        });
+    </script>
+
+
+</body></html>
