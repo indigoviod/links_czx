@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>InnoLinks株式会社</title>
+<title>電子公告 | InnoLinks株式会社</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;600&display=swap" rel="stylesheet">
-<link href="./css/common.css" rel="stylesheet">
-<link rel="icon" href="favicon.png" sizes="32x32">
-<link rel="icon" href="favicon.png" sizes="16x16">
-<link rel="apple-touch-icon" href="favicon.png">
+<link href="../css/common.css" rel="stylesheet">
+<link rel="icon" href="../favicon.png" sizes="32x32">
+<link rel="icon" href="../favicon.png" sizes="16x16">
+<link rel="apple-touch-icon" href="../favicon.png">
 
 <style>
 *{
@@ -142,150 +142,88 @@ nav a:hover{
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* hero */
-.hero{
-  height:100vh;
+/* koukoku page hero */
+.page-hero{
+  height:40vh;
   display:flex;
   align-items:center;
-  padding:0 60px;
+  padding:80px 60px;
+  padding-top:120px;
+  margin-top:0;
 }
 
-.hero-inner{
+.page-hero-inner{
   max-width:900px;
 }
 
-.sub{
-  font-size:13px;
-  letter-spacing:4px;
-  color:#666;
-  margin-bottom:28px;
-}
-
-.title{
-  font-size:64px;
+.page-hero h1{
+  font-size:48px;
   font-weight:300;
   line-height:1.2;
   color:#7aa2ff;
+  margin-bottom:16px;
 }
 
-.title span{
-  display:block;
-}
-
-.links-word{
-  font-weight:600;
-  letter-spacing:3px;
-  position:relative;
-  margin-left: 4ch;
-  transition:0.4s;
-}
-
-.links-word::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-8px;
-  width:0%;
-  height:1px;
-  background:#7aa2ff;
-  transition:0.4s;
-}
-
-.links-word:hover{
-  letter-spacing:6px;
-}
-
-.links-word:hover::after{
-  width:100%;
-}
-
-.caption{
-  margin-top:40px;
+.page-hero p{
   font-size:15px;
   color:#9ca3af;
-  max-width:520px;
+  max-width:600px;
 }
 
-/* services */
-.services {
+/* announcement container */
+.announcement-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
-    
-.approach-section {
-  text-align: center;
+
+.announcement-item {
+  padding:24px;
+  background:rgba(255,255,255,0.02);
+  border-radius:8px;
+  border-left:3px solid #7aa2ff;
+  transition:0.3s;
 }
 
-.approach-line {
-  font-size: 18px;
-  color: #e0e0e0;
-  letter-spacing: 2px;
-  line-height: 2;
-  opacity: 0.9;
+.announcement-item:hover {
+  background:rgba(255,255,255,0.05);
+  transform:translateX(4px);
 }
 
-.approach-line.subtle {
-  margin-top: 20px;
-  font-size: 15px;
-  color: rgba(255,255,255,0.4);
-}
-
-/* about */
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-}
-
-.about-grid div{
-  font-size:15px;
-}
-
-/* contact */
-.contact p{
+.announcement-date {
+  font-size:13px;
+  color:#666;
+  letter-spacing:1px;
   margin-bottom:8px;
 }
-.about-minimal {
-  margin-top: 20px;
-  border-left: 1px solid #1f1f22;
-  padding-left: 20px;
+
+.announcement-title {
+  font-size:18px;
+  color:#e5e5e5;
+  font-weight:400;
+  margin-bottom:12px;
 }
 
-.about-minimal p {
-  margin-bottom: 8px;
-  color: #9ca3af;
-  font-size: 15px;
-  letter-spacing: 0.5px;
+.announcement-content {
+  font-size:15px;
+  color:#9ca3af;
+  line-height:1.8;
 }
 
-.about-minimal .company {
-  color: #e5e5e5;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 1px;
+/* empty state */
+.empty-state {
+  text-align:center;
+  padding:60px 40px;
+  background:rgba(255,255,255,0.02);
+  border-radius:8px;
 }
 
-.contact-link {
-  margin-top: 2px;
+.empty-state p {
+  font-size:16px;
+  color:#9ca3af;
+  margin-bottom:12px;
 }
 
-.contact-link a {
-  text-decoration: none;
-  font-size: 13px;
-  color: #cfcfcf;
-  border: 1px solid #2a2a2a;
-  padding: 12px 28px;
-  transition: 0.3s ease;
-  display: inline-block;
-  border-radius: 6px;
-}
-
-.contact-link a:hover {
-  border-color: #7aa2ff;
-  background: rgba(255,255,255,0.05);
-  color: #ffffff;
-}
 /* canvas */
 #network{
   position:fixed;
@@ -295,25 +233,26 @@ nav a:hover{
   height:100%;
   z-index:0;
 }
- 
- .footer {
-   border-top: 1px solid #1f1f22;
-   margin-top: 120px;
-   padding: 40px 60px;
-   font-size: 12px;
-   color: #6b7280;
- }
 
- .footer-inner {
-   max-width: 1100px;
-   margin: auto;
-   display: flex;
-   justify-content: space-between;
- }
+/* footer */
+.footer {
+  border-top: 1px solid #1f1f22;
+  margin-top: 120px;
+  padding: 40px 60px;
+  font-size: 12px;
+  color: #6b7280;
+}
 
- .footer p {
-   letter-spacing: 1px;
- }
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer p {
+  letter-spacing: 1px;
+}
 
 @media (max-width: 768px) {
   header {
@@ -346,17 +285,33 @@ nav a:hover{
 
   nav a {
     margin-left: 0;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     padding: 12px 24px;
     display: block;
     border-bottom: 1px solid rgba(255,255,255,0.05);
   }
 
+  .page-hero {
+    height: 30vh;
+    padding: 0 24px;
+    padding-top: 80px;
+    margin-top: 0;
+  }
+
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
   .footer {
     padding: 40px 24px;
   }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
-    
+
 /*浮现特效*/
 .fade-in {
   opacity: 0;
@@ -378,7 +333,7 @@ nav a:hover{
 
 <header>
   <div class="logo">
-    <a href="#">InnoLinks</a>
+    <a href="../index.html">InnoLinks</a>
   </div>
   <button class="hamburger" id="hamburger">
     <span></span>
@@ -386,109 +341,27 @@ nav a:hover{
     <span></span>
   </button>
   <nav id="nav-menu">
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="./html/Announcement.html">Announcement</a>
-    <a href="./html/inquiry.html">Inquiry</a>
+    <a href="../index.html#services">Services</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="./Announcement.html">Announcement</a>
+    <a href="./inquiry.html">Inquiry</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="sub">静かに、確実に。</div>
-    <div class="title">
-      <span>進化は、</span>
-      <span class="links-word">Linksから</span>
-    </div>
-    <div class="caption">
-      　技術と社会を結び、次の価値を創る。
-      InnoLinksは、静かに革新を積み重ねていきます。
-    </div>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <h1>電子公告</h1>
+    <p>InnoLinks株式会社の最新情報および公告をお知らせします。</p>
   </div>
 </section>
 
-<section id="services" class="fade-in">
-  <h2>SERVICES</h2>
-  <div class="services card" style="background: rgba(255,255,255,0.02);">
-    <div class="card">
-      <div class="card-title">アプリ開発</div>
-      <div class="card-detail">
-        　・iOS / Android<br>
-        　・UI/UX 設計<br>
-        　・保守・運用
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">ソフトウェア開発</div>
-      <div class="card-detail">
-        　・業務システム / Webアプリケーション開発<br>
-        　・要件定義・設計・実装・運用まで一貫対応<br>
-        　・拡張性・保守性を重視したアーキテクチャ設計
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">情報システムの企画・開発・運用</div>
-      <div class="card-detail">
-        　・社内システムの企画立案・導入支援<br>
-        　・業務効率化を目的としたシステム設計<br>
-        　・運用・保守・改善まで継続的に対応
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">ITコンサルティング</div>
-      <div class="card-detail">
-        　・技術選定・システム構成の最適化支援<br>
-        　・開発体制・プロセス改善の提案<br>
-        　・ビジネス課題に対するIT戦略の立案
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title">インターネットサービスの企画・運営</div>
-      <div class="card-detail">
-        　・Webサービスの企画・プロダクト設計<br>
-        　・ユーザー体験を重視した機能設計<br>
-        　・運用データに基づく継続的な改善
-      </div>
-    </div> 
-   </div>
-</section>
-
-<section class="approach-section">
-  <p class="approach-line">
-    課題の本質を捉え、
-  </p>
-  <p class="approach-line">
-    設計から運用まで一貫して対応する。
-  </p>
-
-  <p class="approach-line subtle">
-    技術は手段であり、
-  </p>
-  <p class="approach-line subtle">
-    価値の創出を目的とする。
-  </p>
-</section>
-
-<section id="about">
-  <h2>About</h2>
-  <div class="about-minimal card" style="background: rgba(255,255,255,0.05);">
-    <p class="company">InnoLinks株式会社</p>
-    <p>法人番号：8020001167861</p>
-    <p>代表取締役：陳振興</p>
-    <p>設立日：2026年3月26日</p>
-    <p>資本金：200万円</p>
-    <p>所在地：神奈川県川崎市幸区中幸町</p>
-  </div>
-</section>
-
-<section id="contact" class="fade-in">
-  <h2>Contact</h2>
-  <div class="contact card" style="background: rgba(255,255,255,0.05);">
-    <p>メール：info@innolinks.co.jp</p>
-    <p>TEL：070-3302-1125</p>
-    <div class="contact-link">
-      <a href="./html/inquiry.html">お問い合わせ</a>
+<section class="fade-in">
+  <h2>ANNOUNCEMENT</h2>
+  <div class="announcement-container">
+    <div class="empty-state">
+      <p>現在公告すべき事項はありません。</p>
+      <p style="font-size: 13px; color: #6b7280; margin-top: 12px;">当社の公告は、定款の定めによりこのウェブサイトに掲載します。</p>
     </div>
   </div>
 </section>
@@ -509,6 +382,7 @@ window.addEventListener("mouseleave", () => {
   mouse.x = null;
   mouse.y = null;
 });
+
 const canvas = document.getElementById("network");
 const ctx = canvas.getContext("2d");
 
@@ -533,11 +407,9 @@ class Particle{
     this.vx=(Math.random()-0.5)*0.3;
     this.vy=(Math.random()-0.5)*0.3;
 
-    // 新增状态
     this.energy = 0;
     this.awake = false;
     this.phase = 0;
-    
     this.displayEnergy = 0;
   }
 
@@ -559,14 +431,11 @@ class Particle{
 
       if(dist < mouse.radius){
         nearMouse = true;
-
-        // 👇 轻微吸引（很关键：不要太强）
         this.vx += (mouse.x - this.x) * 0.0003;
         this.vy += (mouse.y - this.y) * 0.0003;
       }
     }
 
-    // 👉 鼠标附近更容易触发觉醒
     let triggerChance = nearMouse ? 0.08 : 0.02;
     let threshold = nearMouse ? 3 : 7;
 
@@ -580,19 +449,15 @@ class Particle{
       let t = this.phase;
 
       if(t < 0.4){
-        // 慢慢增强
         this.energy = t / 0.4;
       }
       else if(t < 0.7){
-        // 停留在高能态
         this.energy = 1;
       }
       else{
-        // 慢慢衰退
         this.energy = 1 - (t - 0.7) / 0.3;
       }
 
-      // 👇 轻微扩散（只在觉醒时）
       if(this.energy > 0.6 && Math.random() < 0.01){
         this.energy += 0.1;
       }
@@ -611,7 +476,6 @@ class Particle{
 
     ctx.beginPath();
 
-    // 发光（关键）
     if(this.awake){
       ctx.shadowBlur = 20 * this.displayEnergy;
       ctx.shadowColor = "#7aa2ff";
@@ -630,10 +494,8 @@ for(let i=0;i<COUNT;i++)particles.push(new Particle());
 function animate(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
 
-  // 记录每个粒子的连接数
   let connectionCounts = new Array(particles.length).fill(0);
 
-  // 先算连接
   for(let i=0;i<particles.length;i++){
     for(let j=i+1;j<particles.length;j++){
       let dx=particles[i].x-particles[j].x;
@@ -647,13 +509,11 @@ function animate(){
     }
   }
 
-  // 更新粒子状态
   particles.forEach((p,i)=>{
     p.move();
     p.update(connectionCounts[i]);
   });
 
-  // 画线（带觉醒增强）
   for(let i=0;i<particles.length;i++){
     for(let j=i+1;j<particles.length;j++){
       let dx=particles[i].x-particles[j].x;
@@ -662,8 +522,6 @@ function animate(){
 
       if(d<DIST){
         let baseAlpha = 0.08 - d/2000;
-
-        // 如果任一觉醒 → 增强
         let boost = Math.max(particles[i].displayEnergy, particles[j].displayEnergy);
 
         ctx.beginPath();
@@ -678,7 +536,6 @@ function animate(){
     }
   }
 
-  // 画粒子
   particles.forEach(p=>p.draw());
 
   requestAnimationFrame(animate);
@@ -715,52 +572,6 @@ navLinks.forEach(link => {
     navMenu.classList.remove("active");
   });
 });
-
-// 检测是否为移动设备
-const isMobile = () => {
-  return window.matchMedia("(hover: none)").matches;
-};
-
-// 获取所有卡片（只选择直接子元素的.card）
-const cards = document.querySelectorAll(".services > .card, .contact > .card, .about-minimal");
-
-// 桌面端：鼠标悬停时展开当前卡片，隐藏其他卡片
-if (!isMobile()) {
-  cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-      cards.forEach(c => c.classList.remove("active"));
-      card.classList.add("active");
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.classList.remove("active");
-    });
-  });
-}
-
-// 移动端：点击卡片时展开/收起
-if (isMobile()) {
-  cards.forEach(card => {
-    card.addEventListener("click", (e) => {
-      e.stopPropagation();
-      
-      cards.forEach(c => {
-        if (c !== card) c.classList.remove("active");
-      });
-
-      card.classList.toggle("active");
-    });
-  });
-
-  // 点击卡片外部时关闭
-  document.addEventListener("click", (e) => {
-    cards.forEach(card => {
-      if (!card.contains(e.target)) {
-        card.classList.remove("active");
-      }
-    });
-  });
-}
 </script>
 
 </body>
