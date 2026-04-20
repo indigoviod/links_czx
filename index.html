@@ -18,6 +18,10 @@
   box-sizing:border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: "Meiryo";
   background:#0e0e10;
@@ -31,6 +35,12 @@ section{
   margin:auto;
   position:relative;
   z-index:2;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 24px;
+  }
 }
 
 h2{
@@ -239,6 +249,16 @@ nav a:hover{
  .footer p {
    letter-spacing: 1px;
  }
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 24px;
+  }
+
+  .footer {
+    padding: 40px 24px;
+  }
+}
     
 /*浮现特效*/
 .fade-in {
@@ -331,7 +351,7 @@ nav a:hover{
 </section>
 
 <section id="about">
-  <h2>ABOUT</h2>
+  <h2>About</h2>
   <div class="about-minimal card" style="background: rgba(255,255,255,0.05);">
     <p class="company">InnoLinks株式会社</p>
     <p>法人番号：8020001167861</p>
@@ -343,7 +363,7 @@ nav a:hover{
 </section>
 
 <section id="contact" class="fade-in">
-  <h2>CONTACT</h2>
+  <h2>Contact</h2>
   <div class="contact card" style="background: rgba(255,255,255,0.05);">
     <p>メール：info@innolinks.co.jp</p>
     <p>TEL：070-3302-1125</p>
@@ -373,8 +393,11 @@ const canvas = document.getElementById("network");
 const ctx = canvas.getContext("2d");
 
 let particles=[];
-const COUNT=80;
-const DIST=140;
+
+// 根据设备类型调整粒子参数
+const isMobileDevice = window.matchMedia("(hover: none)").matches;
+const COUNT = isMobileDevice ? 40 : 80;
+const DIST = isMobileDevice ? 90 : 140;
 
 function resize(){
   canvas.width=window.innerWidth;

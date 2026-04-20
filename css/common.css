@@ -59,6 +59,8 @@
 .card-detail {
   opacity: 0;
   max-height: 0;
+  font-size: 12px;
+  color: #8a8f98;
   overflow: hidden;
   transition: opacity 0.3s ease, max-height 0.3s ease;
 }
