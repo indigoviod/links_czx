@@ -152,42 +152,8 @@ nav a:hover{
 /* services */
 .services {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
-}
-
-.card {
-  padding: 28px 24px;
-  border: 1px solid #1f1f22;
-  background: rgba(255,255,255,0.05);
-  color: #cfcfcf;
-  font-size: 16px;
-  font-weight: 300;
-  transition: 0.4s ease;
-  position: relative;
-}
-
-/* hover才显 */
-.card:hover {
-  border-color: #7aa2ff;
-  color: #ffffff;
-  transform: translateY(-4px);
-}
-
-/* 细线发光 */
-.card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1px;
-  background: #7aa2ff;
-  transition: 0.4s ease;
-}
-
-.card:hover::after {
-  width: 100%;
 }
     
 /* about */
@@ -320,12 +286,47 @@ nav a:hover{
 <section id="services" class="fade-in">
   <h2>SERVICES</h2>
   <div class="services card" style="background: rgba(255,255,255,0.02);">
-    <div class="card">アプリ開発</div>
-    <div class="card">ソフトウェア開発</div>
-    <div class="card">情報システムの企画・開発・運用</div>
-    <div class="card">ITコンサルティング</div>
-    <div class="card">インターネットサービスの企画・運営</div>
-  </div>
+    <div class="card">
+      <div class="card-title">アプリ開発</div>
+      <div class="card-detail">
+        　・iOS / Android<br>
+        　・UI/UX 設計<br>
+        　・保守・運用
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">ソフトウェア開発</div>
+      <div class="card-detail">
+        　・業務システム / Webアプリケーション開発<br>
+        　・要件定義・設計・実装・運用まで一貫対応<br>
+        　・拡張性・保守性を重視したアーキテクチャ設計
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">情報システムの企画・開発・運用</div>
+      <div class="card-detail">
+        　・社内システムの企画立案・導入支援<br>
+        　・業務効率化を目的としたシステム設計<br>
+        　・運用・保守・改善まで継続的に対応
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">ITコンサルティング</div>
+      <div class="card-detail">
+        　・技術選定・システム構成の最適化支援<br>
+        　・開発体制・プロセス改善の提案<br>
+        　・ビジネス課題に対するIT戦略の立案
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">インターネットサービスの企画・運営</div>
+      <div class="card-detail">
+        　・Webサービスの企画・プロダクト設計<br>
+        　・ユーザー体験を重視した機能設計<br>
+        　・運用データに基づく継続的な改善
+      </div>
+    </div> 
+   </div>
 </section>
 
 <section id="about">
@@ -552,6 +553,52 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".fade-in").forEach(el => {
   observer.observe(el);
 });
+
+// 检测是否为移动设备
+const isMobile = () => {
+  return window.matchMedia("(hover: none)").matches;
+};
+
+// 获取所有卡片（只选择直接子元素的.card）
+const cards = document.querySelectorAll(".services > .card, .contact > .card, .about-minimal");
+
+// 桌面端：鼠标悬停时展开当前卡片，隐藏其他卡片
+if (!isMobile()) {
+  cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      cards.forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.classList.remove("active");
+    });
+  });
+}
+
+// 移动端：点击卡片时展开/收起
+if (isMobile()) {
+  cards.forEach(card => {
+    card.addEventListener("click", (e) => {
+      e.stopPropagation();
+      
+      cards.forEach(c => {
+        if (c !== card) c.classList.remove("active");
+      });
+
+      card.classList.toggle("active");
+    });
+  });
+
+  // 点击卡片外部时关闭
+  document.addEventListener("click", (e) => {
+    cards.forEach(card => {
+      if (!card.contains(e.target)) {
+        card.classList.remove("active");
+      }
+    });
+  });
+}
 </script>
 
 </body>

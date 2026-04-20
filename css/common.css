@@ -12,3 +12,68 @@
   color: #ffffff;
 }
     
+
+.card {
+  padding: 28px 24px;
+  border: 1px solid #1f1f22;
+  background: rgba(255,255,255,0.05);
+  color: #cfcfcf;
+  font-size: 16px;
+  font-weight: 00;
+  transition: 0.4s ease;
+  position: relative;
+}
+
+/* hover才显 */
+.card:hover {
+  border-color: #7aa2ff;
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+/* 细线发光 */
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #7aa2ff;
+  transition: 0.4s ease;
+}
+
+.card:hover::after {
+  width: 100%;
+}
+
+/* card-detail */
+.card-title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #e5e5e5;
+}
+
+.card-detail {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* 桌面端：active 类时显示（由 JavaScript 控制） */
+@media (hover: hover) {
+  .card.active .card-detail {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+/* 移动端：active 时显示 */
+@media (hover: none) {
+  .card.active .card-detail {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
