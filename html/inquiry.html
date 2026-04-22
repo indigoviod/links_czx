@@ -27,105 +27,50 @@
         }
 
         /* Header */
-        header {
-            padding: 24px 60px;
-            border-bottom: 1px solid rgba(122, 162, 255, 0.1);
-            background: rgba(14, 14, 16, 0.8);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 10;
-        }
 
-        .logo {
-            flex: 1;
-        }
 
-        nav {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #8a8f98;
-            font-size: 13px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffffff;
-        }
-
-        /* hamburger menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            width: 32px;
-            height: 32px;
-            z-index: 11;
-            justify-content: center;
-            align-items: center;
-            margin-right: 0;
-        }
-
-        .hamburger span {
-            width: 22px;
-            height: 2.5px;
-            background: #e5e5e5;
-            margin: 4px 0;
+        .hamburger img {
+            width: 48px;
+            height: 48px;
             transition: 0.3s ease;
-            display: block;
-            border-radius: 2px;
         }
 
-        .hamburger:hover span {
-            background: #7aa2ff;
+        .hamburger:hover img {
+            opacity: 0.7;
         }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px);
+        /* Page Hero */
+        .page-hero {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 60px;
+            padding-top: 120px;
+            margin-top: 0;
         }
 
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
+        .page-hero-inner {
+            max-width: 900px;
         }
 
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-
-        .title {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        h1 {
+        .page-hero h1 {
             font-size: 48px;
             font-weight: 300;
             line-height: 1.2;
-            color: #e5e5e5;
+            color: #7aa2ff;
+            margin-bottom: 16px;
         }
 
-        h1 span {
-            font-weight: 600;
-            color: #7aa2ff;
-            letter-spacing: 2px;
+        .page-hero p {
+            font-size: 15px;
+            color: #9ca3af;
+            max-width: 600px;
         }
 
         /* Main Content */
         main {
             flex: 1;
-            padding: 100px 60px 80px 60px;
+            padding: 80px 60px;
             margin-top: 0;
         }
 
@@ -384,12 +329,6 @@
         @media (max-width: 768px) {
             header {
                 padding: 20px 24px;
-                flex-wrap: wrap;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 10;
             }
 
             .hamburger {
@@ -423,29 +362,21 @@
                 padding: 12px 24px;
                 display: block;
                 border-bottom: 1px solid rgba(255,255,255,0.05);
-                width: 100%;
             }
 
-            .title {
-                position: static;
-                transform: none;
-                width: 100%;
-                text-align: center;
-                margin-top: 10px;
+            .page-hero {
+                height: 30vh;
+                padding: 0 24px;
+                padding-top: 80px;
+                margin-top: 0;
             }
 
-            .header-content {
-                padding: 0;
-            }
-
-            h1 {
-                font-size: 24px;
+            .page-hero h1 {
+                font-size: 32px;
             }
 
             main {
                 padding: 40px 24px;
-                margin-top: 0;
-                padding-top: 100px;
             }
 
             .form-section {
@@ -512,14 +443,12 @@
 </head>
 <body>
     <header>
-        <button class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
         <div class="logo">
             <a href="../index.html">InnoLinks</a>
         </div>
+        <button class="hamburger" id="hamburger">
+            <img src="../asset/bager.png" alt="Menu" />
+        </button>
         <nav id="nav-menu">
             <a href="../index.html#services">Services</a>
             <a href="../index.html#about">About</a>
@@ -527,14 +456,14 @@
             <a href="./Announcement.html">Announcement</a>
             <a href="./inquiry.html">Inquiry</a>
         </nav>
-        <div class="title">
-            <h1 style="color:#7aa2ff;">
-              お問い合わせ
-            </h1>
-        </div>
     </header>
 
-    <main>
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <h1>お問い合わせ</h1>
+            <p>ご不明な点やご質問がございましたら、以下のフォームにご記入の上、送信ボタンをクリックしてください。</p>
+        </div>
+    </section>
         <div class="container">
             <section class="intro-section">
                 <p id="intro-text">

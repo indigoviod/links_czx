@@ -71,75 +71,16 @@ li{
 }
 
 /* header */
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  padding:24px 60px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(14,14,16,0.6);
-  backdrop-filter:blur(10px);
-  z-index:10;
-}
 
-nav {
-  display: flex;
-}
 
-nav a{
-  text-decoration:none;
-  color:#8a8f98;
-  margin-left:30px;
-  font-size:13px;
-  transition:0.3s;
-}
-
-nav a:hover{
-  color:#ffffff;
-}
-
-/* hamburger menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  width: 32px;
-  height: 32px;
-  z-index: 11;
-  justify-content: center;
-  align-items: center;
-}
-
-.hamburger span {
-  width: 22px;
-  height: 2.5px;
-  background: #e5e5e5;
-  margin: 4px 0;
+.hamburger img {
+  width: 48px;
+  height: 48px;
   transition: 0.3s ease;
-  display: block;
-  border-radius: 2px;
 }
 
-.hamburger:hover span {
-  background: #7aa2ff;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+.hamburger:hover img {
+  opacity: 0.7;
 }
 
 /* hero */
@@ -381,9 +322,7 @@ nav a:hover{
     <a href="#">InnoLinks</a>
   </div>
   <button class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+    <img src="./asset/bager.png" alt="Menu" />
   </button>
   <nav id="nav-menu">
     <a href="#services">Services</a>
@@ -402,7 +341,7 @@ nav a:hover{
       <span class="links-word">Linksから</span>
     </div>
     <div class="caption">
-      　技術と社会を結び、次の価値を創る。
+      　技術と社会を結び、次の価値を創ります。
       InnoLinksは、静かに革新を積み重ねていきます。
     </div>
   </div>
@@ -459,14 +398,14 @@ nav a:hover{
     課題の本質を捉え、
   </p>
   <p class="approach-line">
-    設計から運用まで一貫して対応する。
+    設計から運用まで一貫して対応します。
   </p>
 
   <p class="approach-line subtle">
     技術は手段であり、
   </p>
   <p class="approach-line subtle">
-    価値の創出を目的とする。
+    価値の創出を目的とします。
   </p>
 </section>
 
