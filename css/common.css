@@ -11,6 +11,12 @@
 .logo a:hover {
   color: #ffffff;
 }
+
+.logo img {
+  display: block;
+  max-height: 48px;
+  height: auto;
+}
     
 
 .card {
